@@ -23,3 +23,11 @@ FontColorTitle = 255,255,255,255
 FontColorHighlight = 255,255,255,255
 FontColorLow = 170,170,170,255
 FontEffectColorNormal = 0,0,0,20
+
+
+; ============================================================
+; Bars
+; ============================================================
+BarColorHighlight = 19A2DE
+BarColorLow = 225,225,225,35
+BarHeight = 2
