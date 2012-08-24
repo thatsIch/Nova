@@ -1,8 +1,8 @@
 function Initialize()
 
-	vNotes = SKIN:ReplaceVariables("#Notes#");
-	vNewLine = SKIN:ReplaceVariables("#NLSign#");
-
+	vNotes = SKIN:GetVariable("NoteNotes");
+	vNewLine = SKIN:GetVariable("NoteNLSign");
+	print(vNotes)
 
 end -- function Initialize
 

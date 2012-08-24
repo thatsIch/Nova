@@ -4,10 +4,10 @@ function Initialize()
 --	pattern
 	patEntry = '<entry.-</entry>'
 	patTitle = '.-<title.->(.-)</title>.-'
-	patDate='.-Wann: (.-)&lt'
+	patDate = '.-Wann: (.-)&lt'
 	patDateTimeExtract = '(%a%a) (%d+)%. (.-)%.? (%d%d%d%d)'
 	patTimeExtract = '(%d%d)%:(%d%d)'
-	tMonthNum={Jan=1;Feb=2;Mar=3;Apr=4;Mai=5;Jun=6;Jul=7;Aug=8;Sep=9;Okt=10;Nov=11;Dez=12;}
+	tMonthNum = {Jan=1;Feb=2;Mar=3;Apr=4;Mai=5;Jun=6;Jul=7;Aug=8;Sep=9;Okt=10;Nov=11;Dez=12;}
 	yShiftDate = 19
 	yShiftItem = 13
 	yShiftDateItemSeperator = -2
@@ -65,7 +65,7 @@ function Update()
 					Date = strDate, 			-- String Date
 					PubDate = intDate, 			-- Int Date
 					PubTime = intTime, 			-- Int DateTime
-					BarColor = "#BarColor" .. i .. "#"
+					BarColor = "#EventBarColor" .. i .. "#"
 				} 
 			)
 		end
@@ -96,14 +96,14 @@ function Update()
 			y = y + yShiftDate
 			if intToday == v.record.PubDate then
 				SetSkinText('strDate'..i, 'Today')
-				SetSkinFontColor('strDate'..i, '#FontColorToday#')
-				SetSkinFontEffectColor('strDate'..i, '#BarColor1#')
+				SetSkinFontColor('strDate'..i, '#EventFontColorToday#')
+				SetSkinFontEffectColor('strDate'..i, '#EventBarColor1#')
 				SetStringEffect('strDate'..i, 'BORDER')
 				SetSkinText('strDateOpt1', v.record.Date)
 			elseif intTomorrow == v.record.PubDate then
 				SetSkinText('strDate'..i, 'Tomorrow')
-				SetSkinFontColor('strDate'..i, '#FontColorTomorrow#')
-				SetSkinFontEffectColor('strDate'..i, '#BarColor2#')
+				SetSkinFontColor('strDate'..i, '#EventFontColorTomorrow#')
+				SetSkinFontEffectColor('strDate'..i, '#EventBarColor2#')
 				SetStringEffect('strDate'..i, 'BORDER')
 				SetSkinText('strDateOpt2', v.record.Date)
 				SKIN:GetMeter('strDateOpt2'):SetY(y)

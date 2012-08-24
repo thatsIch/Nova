@@ -16,6 +16,7 @@ PaperEntryWidth = (#BackgroundX2# - #FrontgroundX1# - #FrontBackPadding# - 2*#Pa
 PaperEntryHeight = (#BackgroundY2# - 2*#FrontBackPadding# - 2*#PaperRoundRadius# - (#PaperRows# - 1) * #PaperRoundRadius#)/#PaperRows#
 
 curFeed = http://www.spiegel.de/schlagzeilen/tops/index.rss
+currFeedNum = 5
 
 Feed1 = Spiegel | http://www.spiegel.de/schlagzeilen/tops/index.rss
 Feed2 = HNA | http://www.hna.de/nachrichten/lokales/uslar-solling/rssfeed.rdf

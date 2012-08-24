@@ -7,18 +7,17 @@ function Initialize()
 
 	-- init
 	local intCount = 1
-	local varKey = SKIN:GetVariable('Key'.. intCount)
 	local varFeed = SKIN:GetVariable('Feed'.. intCount)
 	local currFeedNum = SKIN:GetVariable('currFeedNum') or 1
 
 	-- loop through all variables #KeyX# and #FeedX" found
-	while varKey and varFeed do
+	while varFeed do
 		SetSkinText('PaperFeedLink'..intCount, varKey)
 
-		SKIN:Bang('!SetOption', 'PaperFeedLink'..intCount, 'LeftMouseUpAction', '[!WriteKeyValue "Variables" "currFeedNum" '..intCount..' "#@#IncMulti\\Variables.inc"] [!WriteKeyValue "Variables" "currFeed" '..varFeed..' "#@#IncMulti\\Variables.inc"] [!Refresh]')
+		_, varFeed = split(varFeed, "|")
+		SKIN:Bang('!SetOption', 'PaperFeedLink'..intCount, 'LeftMouseUpAction', '[!WriteKeyValue "Variables" "currFeedNum" '..intCount..' "#@#Inc\\Variable\\Paper.inc"] [!WriteKeyValue "Variables" "currFeed" '..varFeed..' "#@#Inc\\Variable\\Paper.inc"] [!Refresh]')
 
 		intCount = intCount + 1
-		varKey = SKIN:GetVariable('Key'.. intCount)
 		varFeed = SKIN:GetVariable('Feed'.. intCount)
 	end
 

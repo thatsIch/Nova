@@ -1,3 +1,3 @@
 [Variables]
-NoteNotes =test///Test2///Test3///Test4
+NoteNotes =das ist ein Test///und die nächste Zeile
 NoteNLSign = ///
